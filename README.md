@@ -37,3 +37,11 @@ http://127.0.0.1:8000/pizza
 ```
 
 Then create order from that page
+
+## Calculate snail movement program
+
+Run this command
+
+```bash
+php artisan app:calculate-snail-movement
+```
