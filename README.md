@@ -17,3 +17,6 @@ Available options are:
 --numbers=true // Include numbers; default value is true
 --symbols=true // Include symbols; default value is true
 ```
+
+Shows command information. Run this command
+`php artisan app:password-generator --help`
