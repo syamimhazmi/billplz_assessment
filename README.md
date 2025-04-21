@@ -19,4 +19,5 @@ Available options are:
 ```
 
 Shows command information. Run this command
+
 `php artisan app:password-generator --help`
