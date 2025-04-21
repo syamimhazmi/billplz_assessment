@@ -41,6 +41,8 @@ class PasswordGenerator extends Command
 
         $options = $this->options();
 
+        $this->validateOptions($options);
+
         if (boolval($options['small'])) {
             $characters .= $small_letters;
 
@@ -81,5 +83,31 @@ class PasswordGenerator extends Command
 
         $this->info("success generating password");
         $this->line("password: {$password}");
+    }
+
+    /**
+    * @param array $options
+    */
+    public function validateOptions(array $options): void
+    {
+        if (is_null($options['length']) || empty($options['length'])) {
+            $this->error('Required length options');
+        }
+
+        if (is_null($options['small']) || empty($options['small'])) {
+            $this->error('Required small letters options');
+        }
+
+        if (is_null($options['capital']) || empty($options['capital'])) {
+            $this->error('Required capital letters options');
+        }
+
+        if (is_null($options['numbers']) || empty($options['numbers'])) {
+            $this->error('Required numbers options');
+        }
+
+        if (is_null($options['symbols']) || empty($options['symbols'])) {
+            $this->error('Required symbols options');
+        }
     }
 }
