@@ -21,3 +21,19 @@ Available options are:
 Shows command information. Run this command
 
 `php artisan app:password-generator --help`
+
+## Pizza order ordering program
+
+Serve application:
+
+```php
+php artisan serve
+```
+
+Go to pizza order page:
+
+```php
+http://127.0.0.1:8000/pizza
+```
+
+Then create order from that page
