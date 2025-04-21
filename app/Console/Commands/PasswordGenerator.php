@@ -56,7 +56,7 @@ class PasswordGenerator extends Command
         if (boolval($options['numbers'])) {
             $characters .= $numbers;
 
-            $include[] = $numbers[rand(0, strlen($numbers))];
+            $include[] = $numbers[rand(0, strlen($numbers) - 1)];
         }
 
         if (boolval($options['symbols'])) {
@@ -76,7 +76,7 @@ class PasswordGenerator extends Command
         $char_length = strlen($characters);
 
         while (strlen($password) < intval($options['length'])) {
-            $password .= $characters[rand(0, $char_length)];
+            $password .= $characters[rand(0, $char_length - 1)];
         }
 
         $this->info("success generating password");
