@@ -1,5 +1,13 @@
 # Billplz Assessment
 
+## Setup the project
+
+Run this commands:
+
+```bash
+composer install && npm install
+```
+
 ## Password generator application
 
 To generate a password, run this command
